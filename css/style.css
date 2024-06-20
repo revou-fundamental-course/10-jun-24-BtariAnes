@@ -1,38 +1,95 @@
-/* INI CSS YAA... */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    background: #f0f2f5;
+}
 
+/* Menyesuaikan gaya judul header */
+header h1 {
+    font-size: 36px;
+    color: #ffffff; /* Putih */
+    text-transform: uppercase;
+    background: linear-gradient(to right, #2980b9, #2c3e50); /* Gradien dari biru muda ke biru tua */
+    -webkit-background-clip: text; /* Menyembunyikan latar belakang di dalam teks */
+    background-clip: text;
+    -webkit-text-fill-color: transparent; /* Warna teks transparan untuk WebKit */
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: inline-block;
+}
+
+
+main {
+    max-width: 600px;
+    width: 100%;
+    background: #ecf0f1; /* Light grayish white */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+}
+
+p {
+    text-align: center;
+    color: #34495e; /* Dark grayish blue */
+}
+
+.conversion-section, .formula-section {
+    margin-top: 20px;
+}
+
+.input-section {
+    margin-bottom: 20px;
+}
+
+h4 {
+    margin-bottom: 10px;
+    color: #34495e; /* Dark grayish blue */
+}
 
 textarea {
-    resize: none;
-    background-color: #f8f8f8;
-    border: 2px solid #ccc;
-    border-radius: 4px;
-    font-family: math;
-    font-size: 14px;
+    width: 100%;
+    height: 40px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.button-section {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
 }
 
 .button {
-    height: 32px;
-    border: 0px;
-    border-radius: 4px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    cursor: pointer;
 }
 
-.green {
-    background-color: green;
-    color: white;
+.button.green {
+    background: #27ae60; /* Green */
 }
 
-.red {
-    background-color: red;
-    color: white;
+.button.red {
+    background: #e74c3c; /* Red */
 }
 
-.grey {
-    background-color: grey;
-    color: white;
+.button.grey {
+    background: #95a5a6; /* Gray */
+}
+
+.button:hover {
+    opacity: 0.8;
 }
 
 .subject-info {
-    font-size: 20px;
-    font-style: italic;
-    font-family: math;
+    font-weight: bold;
 }

@@ -3,86 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Final Project</title>
+    <title>Temperature Conversion</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <header>
-        <h1>Website Konversi Suhu</h1>
+        <h1>Temperature Conversion</h1>
     </header>
 
-    <!-- Main Content -->
     <main>
-        <p>Masukkan suhu derajat Celcius (&deg;C) ke kotak dibawah, lalu klik tombol Konversi untuk mendapatkan hasil Konversidalam bentuk Fahrenheit (&deg;F)</p>
+        <p>Enter the temperature in degrees Celsius (&deg;C) below, then click the Convert button to get the result in Fahrenheit (&deg;F).</p>
         
-        <!-- Section Celcius -->
-        <section>
-            <header>
-                <h4>Celcius (&deg;C):</h4>
-            </header>
+        <section class="conversion-section">
+            <div class="input-section">
+                <h4>Celsius (&deg;C):</h4>
+                <textarea id="celsius-input"></textarea>
+            </div>
 
-            <section>
-                <textarea name="" id=""></textarea>
+            <div class="button-section">
+                <button class="button green" onclick="convertToFahrenheit()">Convert</button>
+                <button class="button red" onclick="resetFields()">Reset</button>
+                <button class="button grey" onclick="reverseConversion()">Reverse</button>
+            </div>
 
-                <section>
-                    <button class="button green">Konversi</button>
-                    <button class="button red">Reset</button>
-                    <button class="button grey">Reverse</button>
-                </section>
-            </section>
-        </section>
-
-        <!-- Section Fahrenheit -->
-        <section>
-            <header>
+            <div class="input-section">
                 <h4>Fahrenheit (&deg;F):</h4>
-            </header>
+                <textarea id="fahrenheit-input" readonly></textarea>
+            </div>
 
-            <section>
-                <textarea name="" id=""></textarea>
-            </section>
+            <div class="input-section">
+                <h4>Conversion Calculation:</h4>
+                <textarea id="calculation" readonly></textarea>
+            </div>
         </section>
 
-        <!-- Section Calculate -->
-        <section>
-            <header>
-                <h4>Convertion Calculate:</h4>
-            </header>
-
-            <section>
-                <textarea name="" id=""></textarea>
-            </section>
-        </section>
-
-        <!-- Section Formula -->
-        <section>
-            <header>
-                <h3>Cara Konversi dari Celcius (&deg;C) ke Fahrenheit (&deg;F):</h3>
-            </header>
-
+        <section class="formula-section">
+            <h3>How to Convert Celsius (&deg;C) to Fahrenheit (&deg;F):</h3>
             <hr>
-
-            <p>
-                Suhu <span class="subject-info">S</span> dalam derajat Fahrenheit (&deg;F) 
-                sama <span class="subject-info">S</span> dengan suhu dalam derajat Celcius (&deg;C)
-                kali  <span class="subject-info">9/5</span> tambah <span class="subject-info">32.</span>
-            </p>
-
-            <p>
-                <span class="subject-info">S</span><sub>(&deg;F)</sub> = 
-                (<span class="subject-info">S</span><sub>(&deg;C)</sub> x 9/5) + 32
-            </p>
-
-            <p>atau</p>
-                <span class="subject-info">S</span><sub>(&deg;F)</sub> = 
-                (<span class="subject-info">S</span><sub>(&deg;C)</sub> x 1.8) + 32
-            
-            <p>
-
-            </p>
+            <p>The temperature <span class="subject-info">T</span> in degrees Fahrenheit (&deg;F) is equal to the temperature in degrees Celsius (&deg;C) times <span class="subject-info">9/5</span> plus <span class="subject-info">32.</span></p>
+            <p><span class="subject-info">T</span><sub>(&deg;F)</sub> = (<span class="subject-info">T</span><sub>(&deg;C)</sub> × 9/5) + 32</p>
+            <p>or</p>
+            <p><span class="subject-info">T</span><sub>(&deg;F)</sub> = (<span class="subject-info">T</span><sub>(&deg;C)</sub> × 1.8) + 32</p>
         </section>
     </main>
-    <!-- Link JavaScript -->
+
     <script src="js/script.js"></script>
 </body>
 </html>
